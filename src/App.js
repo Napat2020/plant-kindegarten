@@ -1,58 +1,34 @@
-import React from 'react';
-import { Router } from '@reach/router'
-import About from './pages/About/About'
-import Contact from './pages/Contact.jsx'
-import Portfolio from './pages/Portfolio.jsx'
-import Blog from './pages/Blog.jsx'
-import Home from './pages/Home.jsx'
-import ResponsiveNavigation from './components/ResponsiveNavigation'
-import logo from './Logo.png';
-import './App.css';
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import Routing from './routes'
 
-function App() {
-	const navLinks = [
-		{
-			text: 'Home',
-			path: '/',
-			icon: 'ion-ios-home'
-		},
-		{
-			text: 'Marketplace',
-			path: '/Marketplace',
-			icon: 'ion-ios-cart'
-		},
-		{
-			text: 'Contact',
-			path: '/contact',
-			icon: 'ion-ios-megaphone'
-		},
-		{
-			text: 'About',
-			path: '/about',
-			icon: 'ion-ios-business'
-		},
-		{
-			text: 'Login',
-			path: '/Login',
-		},
-		
-	]
+class App extends Component {
+  render() {
+    return (
+      <div className="my-app">
+        <nav className="navbar is-orange-invert" role="navigation" aria-label="main navigation">
+          <div className="container">
+            <div className="navbar-brand">
+              <a className="navbar-item" href="/">
+                <img src={process.env.PUBLIC_URL + '/images/Logo.png'} alt="LOGO"/>
+                
+              </a>
+            </div>
+            <div className="navbar-menu is-active">
+              <div className="navbar-end">
+                <NavLink exact to="/" activeClassName="is-active" className="navbar-item"><i class="fas fa-home"></i>Home</NavLink>
+                <NavLink to="/marketplace" activeClassName="is-active" className="navbar-item"><i class="fas fa-shopping-cart"></i>Marketplace</NavLink>
+                <NavLink to="/about" activeClassName="is-active" className="navbar-item"><i class="fas fa-info-circle"></i>About</NavLink>
+                <NavLink to="/login" activeClassName="is-active" className="navbar-item"><i class="fas fa-sign-in-alt"></i>Login</NavLink>
+              </div>
+            </div>
+          </div>
+        </nav>
 
-	return (
-		<div className="App">
-			<ResponsiveNavigation
-				navLinks={ navLinks }
-				logo={ logo }
-				background="#95C4B1"
-				hoverBackground="#ddd"
-				linkColor="#fff"
-			/>
-			<Router>
-				<Contact path="/contact" />
-				<Home path="/home" />
-				<About path="/about" />
-			</Router>
-		</div>
-	);
+        <Routing />
+      </div>
+    )
+  }
 }
-export default App;
+
+export default App
