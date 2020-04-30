@@ -1,0 +1,7 @@
+.container2 {
+    margin: 1rem 2rem 1rem 2rem;
+    height: 90vh;
+	display: flex;
+	/* align-items: center; */
+    justify-content: center;
+}
