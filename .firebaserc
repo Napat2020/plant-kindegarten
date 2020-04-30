@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "e-commerce-1febb"
+    "default": "plant-service",
+    "plant-service": "plant-service",
+    "staging": "plant-service"
   }
 }

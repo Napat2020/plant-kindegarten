@@ -7,13 +7,13 @@ import  guid  from 'guid';
 
 const config = {
   apiKey: "AIzaSyAKs6HGdK3B0mJ7HAV3NWgWyXkzPAB8kXU",
-    authDomain: "plant-service.firebaseapp.com",
-    databaseURL: "https://plant-service.firebaseio.com",
-    projectId: "plant-service",
-    storageBucket: "plant-service.appspot.com",
-    messagingSenderId: "1073198893164",
-    appId: "1:1073198893164:web:9a74aab54a07e98f313049",
-    measurementId: "G-CEM5VPERQG"
+  authDomain: "plant-service.firebaseapp.com",
+  databaseURL: "https://plant-service.firebaseio.com",
+  projectId: "plant-service",
+  storageBucket: "plant-service.appspot.com",
+  messagingSenderId: "1073198893164",
+  appId: "1:1073198893164:web:9a74aab54a07e98f313049",
+  measurementId: "G-CEM5VPERQG"
 };
 
 class Firebase {
